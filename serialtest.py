@@ -1,5 +1,4 @@
 import serial
-import os
 import time
 from spotiget import getSongs
 from spotiget import isPlaying
@@ -17,18 +16,21 @@ for i in range(length):
 counter = 0
 while True:
     numberator = s.read(1)
-    print(numberator)
     time.sleep(1)
     if numberator is b'4':
+        print("B PRESS")
         print(realsongs[counter])
         s.write(bytes(realsongs[counter], 'utf-8'))
         counter += 1
         s.write(b"$")
     elif numberator is b'2':
-        playState = isPlaying()
+        print("A PRESS")
+        playing = isPlaying()
+        if(playing):
+            print("Song is playing.")
+        else:
+            print("Song is NOT playing.")
 
     numberator = 0
     if counter is 10:
         counter = 0
-
-s.close()
