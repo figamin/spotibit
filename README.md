@@ -1,4 +1,4 @@
-# SoarCS 2019!
+# Spotibit
 
 <!-- Note, the line below this one is what links to your screenshot, **DO NOT REMOVE** -->
 ![my_screenshot](./screenshot.jpg)
@@ -13,4 +13,4 @@ your own screenshot.
 
 ## <your-project-name>
 
-a brief description of your project goes here
+Spotify controller for micro:bit
